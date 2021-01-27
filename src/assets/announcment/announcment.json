@@ -1,0 +1,16 @@
+{
+  "announcments": [
+    {
+      "id": 1,
+      "ann_name": "Yogunluk Menu Anonsu",
+      "filename": "yogunluk-menu.wav",
+      "description": "Bu bir yogunluk anonsudur."
+    },
+    {
+      "id": 2,
+      "ann_name": "Sosyal Medya Anonsu",
+      "filename": "sosyal-medya.wav",
+      "description": "Bu bir sosyal-medya anonsudur."
+    }
+  ]
+}
