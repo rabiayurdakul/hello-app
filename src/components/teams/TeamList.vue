@@ -2,8 +2,8 @@
   <div>
     <h2>Team List</h2>
     <hr>
-    <v-btn @click="showUserList" to="/dynamicList">User</v-btn>
-    <v-btn @click="showAnnouncementList" to="/dynamicList">Announcements</v-btn>
+    <v-btn @click="showUserList" to="/userComp">User</v-btn>
+    <v-btn @click="showAnnouncementList" to="/announceComp">Announcements</v-btn>
 
 <!--    <router-view :itemprop="passJsonName"></router-view>-->
 

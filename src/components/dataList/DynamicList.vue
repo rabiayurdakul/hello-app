@@ -36,6 +36,7 @@
 
 
 
+
 export default {
   data: function (){
     return{
@@ -98,7 +99,9 @@ export default {
         this.editedIndex = -1
       })
     },
-  }
+  },
+
+
 
 }
 </script>

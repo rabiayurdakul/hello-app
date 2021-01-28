@@ -4,10 +4,12 @@ import vuetify from './plugins/vuetify';
 import VueRouter from "vue-router";
 import {routes} from "@/routes";
 import {store} from "./store/store"
+/*import VSlider from "vuetify/src/components/VSlider";*/
 
 Vue.config.productionTip = false
 
 Vue.use(VueRouter);
+/*Vue.use(VSlider);*/
 
 const router = new VueRouter({
     routes,
