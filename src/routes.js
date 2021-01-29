@@ -24,6 +24,7 @@ export const routes=[
 
             ]},
     {path: '/announce', component: AnnouncementList},
+
     {path: '/announceComp', component: AnnounceComp, children: [
             {path: '', component: DynamicList}
         ]},

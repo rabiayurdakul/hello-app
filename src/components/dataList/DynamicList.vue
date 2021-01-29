@@ -15,13 +15,13 @@
         </v-text-field>
       </template>
       <template v-slot:item.action="{ item }">
-        <v-btn class="ma-2" tile outlined color="success">
-          <v-icon left @click="editItem(item)">
+        <v-btn class="ma-2" tile  color="dark">
+          <v-icon left small @click="editItem(item)">
             mdi-pencil
           </v-icon >
           </v-btn>
-        <v-btn class="ma-2" tile outlined color="success">
-          <v-icon left @click="deleteItem(item)">
+        <v-btn class="ma-2" tile  color="dark">
+          <v-icon left  small @click="deleteItem(item)">
             mdi-delete
           </v-icon >
           </v-btn>

@@ -37,32 +37,59 @@
         absolute
         bottom
         temporary
+        dark
 
     >
       <v-list
           nav
           dense
+          rounded
+
       >
+
+
         <v-list-item-group
             v-model="group"
-            active-class="deep-purple--text text--accent-4"
-        >
+            active-class="deep-purple--text text--accent-4">
           <v-list-item>
-            <v-list-item-title>Tüm Anonslar</v-list-item-title>
+            <h1 class="h1" >......</h1>
+          <Voda  class="v-icon"/>
+          </v-list-item>
+
+          <v-list-item @click="showUserList" to="/userComp">
+            <v-icon medium color="blue darken-2">
+              mdi-bullhorn-outline
+            </v-icon>
+
+            <v-list-item-title >Tüm Anonslar</v-list-item-title>
+
+          </v-list-item>
+
+          <v-list-item @click="showAnnouncementList" to="/announceComp">
+            <v-icon medium color="blue darken-2" class="material-icons">
+              mdi-alert-circle-outline
+            </v-icon>
+            <v-list-item-title>IVR Bilgilendirme Anonsları</v-list-item-title>
           </v-list-item>
 
           <v-list-item>
-            <v-list-item-title>IVr Bilgilendirme Anonsları</v-list-item-title>
-          </v-list-item>
-
-          <v-list-item>
+            <v-icon medium  >
+              mdi-alert-outline
+            </v-icon>
             <v-list-item-title>Arıza</v-list-item-title>
           </v-list-item>
 
           <v-list-item>
+            <v-icon medium  >
+              mdi-newspaper-variant-outline
+            </v-icon>
             <v-list-item-title>Kural Listesi</v-list-item-title>
           </v-list-item>
           <v-list-item>
+            <v-icon medium  >
+              mdi-newspaper-variant-multiple-outline
+            </v-icon>
+
             <v-list-item-title>Raporlar</v-list-item-title>
           </v-list-item>
         </v-list-item-group>
@@ -77,15 +104,50 @@
 </template>
 
 <script>
+import Voda from "@/assets/voda-icon.svg";
+import jsonUser from "@/assets/announcment/user.json";
+import jsonAnn from "@/assets/announcment/announcment.json";
+
 export default {
+  components:{
+    Voda,
+  },
   data: () => ({
     drawer: false,
     group: null,
+   // mySVG: require('@/assets/voda-icon.svg')
+
   }),
   watch: {
     group () {
       this.drawer = false
     },
   },
+  methods: {
+
+    showUserList(){
+
+      this.$store.state.url="Users";
+      this.$store.state.items= jsonUser.users;
+    },
+    showAnnouncementList(){
+      this.$store.state.url="Announcements";
+      this.$store.state.items= jsonAnn.announcments;
+    }
+
+
+
+  }
+
 }
 </script>
+<style>
+.v-icon {
+  width: 4em;
+  height: 4em;
+  fill: crimson;
+}
+.h1{
+  color: #353535;
+}
+</style>

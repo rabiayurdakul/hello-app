@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h2>Team List</h2>
+
     <hr>
     <v-btn @click="showUserList" to="/userComp">User</v-btn>
     <v-btn @click="showAnnouncementList" to="/announceComp">Announcements</v-btn>

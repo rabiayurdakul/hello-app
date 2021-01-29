@@ -2,11 +2,13 @@
 <div class="container">
   <app-menuslider></app-menuslider>
 <!--  <slider :width="300" format="push" direction="left" :opacity="0.15" :links="[{'id': 1, 'text': 'Link 1', 'url': 'https://github.com'}, {'id': 2, 'text': 'Link 2', 'url': 'https://github.com'}]"></slider>-->
+
   <div class="row">
     <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
 
+
       <hr>
-    <app-header></app-header>
+
     <router-view></router-view>
       <hr>
       <appdynamic-list></appdynamic-list>
@@ -22,14 +24,14 @@
 </template>
 
 <script>
-import Header from "@/components/nav/Header";
+/*import Header from "@/components/nav/Header";*/
 import DynamicList from "@/components/dataList/DynamicList";
 import MenuSlider from "@/components/menu/MenuSlider";
 /*import Slider from "@jeremyhamm/vue-slider"*/
 
 export default {
   components:{
-    appHeader: Header,
+    /*appHeader: Header,*/
     appdynamicList: DynamicList,
     appMenuslider: MenuSlider,
    /* 'slider':Slider*/
